@@ -33,22 +33,23 @@ int partition(int data[], int low, int high)
 */
 
 
-//Houre
+//Hoare
 int partition(int data[], int low, int high)
 {
 	int key = data[low];
 	int i = low;
 	int j = high;
-	for (j = low; j < high; j++)
+	while (i < j)
 	{
-		if (data[j] <= key)   //must add "="
-		{
+		while (data[j] >= key && i < j)
+			j--;
+		data[i] = data[j];
+
+		while (data[i] <= key && i < j)
 			i++;
-			swap(&data[i], &data[j]);
-		}
+		data[j] = data[i];
 	}
-	i++;
-	swap(&data[i], &data[high]);
+	data[i] = key;
 	return i;
 }
 
