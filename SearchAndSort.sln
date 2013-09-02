@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuickSort", "QuickSort\QuickSort.vcxproj", "{6A750001-7D22-49A4-B2E4-CC0656182FEC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearch", "BinarySearch\BinarySearch.vcxproj", "{9B74483A-A44C-4228-AF07-010E0A0BFBC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +15,10 @@ Global
 		{6A750001-7D22-49A4-B2E4-CC0656182FEC}.Debug|Win32.Build.0 = Debug|Win32
 		{6A750001-7D22-49A4-B2E4-CC0656182FEC}.Release|Win32.ActiveCfg = Release|Win32
 		{6A750001-7D22-49A4-B2E4-CC0656182FEC}.Release|Win32.Build.0 = Release|Win32
+		{9B74483A-A44C-4228-AF07-010E0A0BFBC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9B74483A-A44C-4228-AF07-010E0A0BFBC1}.Debug|Win32.Build.0 = Debug|Win32
+		{9B74483A-A44C-4228-AF07-010E0A0BFBC1}.Release|Win32.ActiveCfg = Release|Win32
+		{9B74483A-A44C-4228-AF07-010E0A0BFBC1}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

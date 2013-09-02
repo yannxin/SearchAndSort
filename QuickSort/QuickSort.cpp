@@ -32,7 +32,7 @@ int partition(int data[], int low, int high)
 }
 */
 
-/*
+
 //Hoare
 int partition(int data[], int low, int high)
 {
@@ -52,7 +52,7 @@ int partition(int data[], int low, int high)
 	data[i] = key;
 	return i;
 }
-*/
+
 /*
 //Bi-scan version
 int partition(int data[], int low, int high)
