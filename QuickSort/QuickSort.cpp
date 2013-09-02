@@ -32,7 +32,7 @@ int partition(int data[], int low, int high)
 }
 */
 
-
+/*
 //Hoare
 int partition(int data[], int low, int high)
 {
@@ -52,8 +52,62 @@ int partition(int data[], int low, int high)
 	data[i] = key;
 	return i;
 }
+*/
+/*
+//Bi-scan version
+int partition(int data[], int low, int high)
+{
+	int key = data[low];  
+	int l = low - 1;  
+	int h = high + 1;  
+	for(;;)  
+	{  
+		do{  
+			h--;  
+		}while(data[h] > key);  
+  
+		do{  
+			l++;  
+		}while(data[l] < key);  
+  
+		if(l < h)  
+		{  
+			swap(&data[l], &data[h]);  
+		}  
+		else  
+		{  
+			return h;     
+		}  
+	}  
+}
+*/
 
-
+/*
+//the uncorrect Bi-scan version, 
+int partition(int data[], int low, int high)
+{
+	int key = data[low];  
+	int l = low;  
+	int h = high;  
+	for(;;)  
+	{  
+		while(data[h] > key)
+			h--;
+  
+		while(data[l] < key)
+			l++;
+  
+		if(l < h)  
+		{  
+			swap(&data[l], &data[h]);  
+		}  
+		else  
+		{  
+			return h;     
+		}  
+	}  
+}
+*/
 void quickSort(int data[], int low, int high)
 {
 	if (low < high)
