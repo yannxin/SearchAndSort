@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "QuickSort.h"
+#include <stdlib.h>
 
 void swap(int* a, int* b)
 {
@@ -11,11 +12,30 @@ void swap(int* a, int* b)
 	*b = temp;
 }
 
-/*
 
+// optimization version
 int partition(int data[], int low, int high)
 {
+
+	/*
+	// Randomize version
+	int randk = low + rand() % (high - low + 1);
+	swap (&data[randk], &data[high]);
+	*/
+
+	/*
+	// Get the middle of three selected data.
+	int mid = low + (high - low) / 2;
+	if (data[low] < data[mid])
+		swap (&data[low], &data[mid]);
+	if (data[high] < data[mid])
+		swap (&data[high], &data[mid]);
+	if (data[low] < data[high])
+		swap (&data[low], &data[high]);
+	*/
+
 	int key = data[high];
+
 	int i = low - 1;
 	int j = low;
 	for (j = low; j < high; j++)
@@ -30,9 +50,9 @@ int partition(int data[], int low, int high)
 	swap(&data[i], &data[high]);
 	return i;
 }
-*/
 
 
+/*
 //Hoare
 int partition(int data[], int low, int high)
 {
@@ -52,7 +72,7 @@ int partition(int data[], int low, int high)
 	data[i] = key;
 	return i;
 }
-
+*/
 /*
 //Bi-scan version
 int partition(int data[], int low, int high)
